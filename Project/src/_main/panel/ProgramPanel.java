@@ -1,7 +1,8 @@
 package _main.panel;
 
-import sorting.QuickSort;
+import sorting.algorithms.BubbleSort;
 import sorting.SortVisualizer;
+import sorting.algorithms.QuickSort;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -35,7 +36,12 @@ public class ProgramPanel extends BasePanel {
             arr[i] = random.nextInt(MIN_VALUE, MAX_VALUE);
 
         List<int[]> stepsBuffer = new ArrayList<>();
-        QuickSort.quickSort(stepsBuffer, arr);
+
+        switch (SETTING_SORTING_ALGORITHM) {
+            case BUBBLE_SORT -> BubbleSort.bubbleSort(stepsBuffer, arr);
+            case QUICK_SORT -> QuickSort.quickSort(stepsBuffer, arr);
+        }
+
         sortV = new SortVisualizer(stepsBuffer);
     }
 

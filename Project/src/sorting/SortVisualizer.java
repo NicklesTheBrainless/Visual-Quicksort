@@ -19,13 +19,15 @@ public class SortVisualizer implements PanelObject {
     @Override
     public void update(double delta) {
         iStep++;
-
         if (iStep == steps.size())
             System.exit(0);
     }
 
     @Override
     public void draw(Graphics2D g2) {
+
+        if (iStep >= steps.size())
+            return;
 
         int[] currentStep = steps.get(iStep);
 

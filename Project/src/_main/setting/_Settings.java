@@ -1,5 +1,7 @@
 package _main.setting;
 
+import sorting.SortingAlgorithm;
+
 import java.awt.*;
 
 public abstract class _Settings {
@@ -8,13 +10,14 @@ public abstract class _Settings {
     public static final String TITLE = "Quicksort Algorithm - Visualized";
 
     // FPS
-    public static final int SETTING_FPS = 300;
+    public static final int SETTING_FPS = 10_000;
 
     // SCREEN
     public static final int SCREEN_WIDTH  = 900;
     public static final int SCREEN_HEIGHT = 900;
 
     // SORTING
+    public static final SortingAlgorithm SETTING_SORTING_ALGORITHM = SortingAlgorithm.BUBBLE_SORT;
     public static final int ARR_LENGTH = 800;
     public static final int MIN_VALUE  = 0;
     public static final int MAX_VALUE  = 800;
