@@ -2,6 +2,7 @@ package _main.panel;
 
 import sorting.algorithms.BubbleSort;
 import sorting.SortVisualizer;
+import sorting.algorithms.InsertionSort;
 import sorting.algorithms.QuickSort;
 
 import java.awt.*;
@@ -39,6 +40,7 @@ public class ProgramPanel extends BasePanel {
 
         switch (SETTING_SORTING_ALGORITHM) {
             case BUBBLE_SORT -> BubbleSort.bubbleSort(stepsBuffer, arr);
+            case INSERTION_SORT -> InsertionSort.insertionSort(stepsBuffer, arr);
             case QUICK_SORT -> QuickSort.quickSort(stepsBuffer, arr);
         }
 

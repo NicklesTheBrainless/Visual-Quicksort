@@ -2,6 +2,8 @@ package sorting.algorithms;
 
 import java.util.List;
 
+import static sorting.SortingUtils.swap;
+
 public abstract class QuickSort {
 
     public static void quickSort(List<int[]> stepsBuffer, int[] arr) {
@@ -35,13 +37,6 @@ public abstract class QuickSort {
         swap(stepsBuffer, arr, pivotIndex, end);
 
         return pivotIndex;
-    }
-
-    private static void swap(List<int[]> stepsBuffer, int[] arr, int index1, int index2) {
-        int temp = arr[index1];
-        arr[index1] = arr[index2];
-        arr[index2] = temp;
-        stepsBuffer.add(arr.clone());
     }
 
 }

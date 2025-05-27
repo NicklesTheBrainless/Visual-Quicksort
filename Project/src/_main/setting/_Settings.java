@@ -17,7 +17,7 @@ public abstract class _Settings {
     public static final int SCREEN_HEIGHT = 900;
 
     // SORTING
-    public static final SortingAlgorithm SETTING_SORTING_ALGORITHM = SortingAlgorithm.BUBBLE_SORT;
+    public static final SortingAlgorithm SETTING_SORTING_ALGORITHM = SortingAlgorithm.INSERTION_SORT;
     public static final int ARR_LENGTH = 800;
     public static final int MIN_VALUE  = 0;
     public static final int MAX_VALUE  = 800;
