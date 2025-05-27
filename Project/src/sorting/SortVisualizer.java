@@ -19,7 +19,7 @@ public class SortVisualizer implements PanelObject {
     @Override
     public void update(double delta) {
         iStep++;
-        if (iStep == steps.size())
+        if (iStep >= steps.size())
             System.exit(0);
     }
 

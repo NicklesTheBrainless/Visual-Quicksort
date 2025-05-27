@@ -7,7 +7,7 @@ import java.awt.*;
 public abstract class _Settings {
 
     // WINDOW
-    public static final String TITLE = "Quicksort Algorithm - Visualized";
+    public static final String TITLE = "Sorting Algorithms - Visualized";
 
     // FPS
     public static final int SETTING_FPS = 10_000;
