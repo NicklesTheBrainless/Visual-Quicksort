@@ -10,22 +10,22 @@ public abstract class QuickSort {
         quickSort(stepsBuffer, arr, 0, arr.length - 1);
     }
 
-    public static void quickSort(List<int[]> stepsBuffer, int[] arr, int start, int end) {
+    public static void quickSort(List<int[]> stepsBuffer, int[] arr, int from, int to) {
 
-        if (start >= end)
+        if (from >= to)
             return;
 
-        int pivotIndex = partition(stepsBuffer, arr, start, end);
-        quickSort(stepsBuffer, arr, start, pivotIndex - 1);
-        quickSort(stepsBuffer, arr, pivotIndex + 1, end);
+        int pivotIndex = partition(stepsBuffer, arr, from, to);
+        quickSort(stepsBuffer, arr, from, pivotIndex - 1);
+        quickSort(stepsBuffer, arr, pivotIndex + 1, to);
     }
 
-    private static int partition(List<int[]> stepsBuffer, int[] arr, int start, int end) {
+    private static int partition(List<int[]> stepsBuffer, int[] arr, int from, int to) {
 
-        int pivot = arr[end];
-        int i = start - 1;
+        int pivot = arr[to];
+        int i = from - 1;
 
-        for (int j = start; j < end; j++) {
+        for (int j = from; j < to; j++) {
 
             if (arr[j] < pivot) {
                 i++;
@@ -34,7 +34,7 @@ public abstract class QuickSort {
         }
 
         int pivotIndex = i + 1;
-        swap(stepsBuffer, arr, pivotIndex, end);
+        swap(stepsBuffer, arr, pivotIndex, to);
 
         return pivotIndex;
     }

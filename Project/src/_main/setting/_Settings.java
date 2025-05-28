@@ -10,14 +10,14 @@ public abstract class _Settings {
     public static final String TITLE = "Sorting Algorithms - Visualized";
 
     // FPS
-    public static final int SETTING_FPS = 10_000;
+    public static final int SETTING_FPS = 500;
 
     // SCREEN
     public static final int SCREEN_WIDTH  = 900;
     public static final int SCREEN_HEIGHT = 900;
 
     // SORTING
-    public static final SortingAlgorithm SETTING_SORTING_ALGORITHM = SortingAlgorithm.INSERTION_SORT;
+    public static final SortingAlgorithm SETTING_SORTING_ALGORITHM = SortingAlgorithm.MERGE_SORT;
     public static final int ARR_LENGTH = 800;
     public static final int MIN_VALUE  = 0;
     public static final int MAX_VALUE  = 800;
