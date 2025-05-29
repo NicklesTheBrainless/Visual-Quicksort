@@ -1,16 +1,12 @@
 package _main.panel;
 
-import sorting.algorithms.BubbleSort;
+import sorting.algorithms.*;
 import sorting.SortVisualizer;
-import sorting.algorithms.InsertionSort;
-import sorting.algorithms.MergeSort;
-import sorting.algorithms.QuickSort;
 import utils.ArrayUtils;
 
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 import static _main.setting._Settings.*;
 
@@ -33,7 +29,7 @@ public class ProgramPanel extends BasePanel {
     @Override
     protected void onStart() {
 
-        int[] arr = ArrayUtils.createShuffledArr(ARR_MIN_VALUE, ARR_MAX_VALUE, ARR_LENGTH * 8);
+        int[] arr = ArrayUtils.createShuffledArr(0, ARR_LENGTH, ARR_LENGTH * 8);
 
         List<int[]> stepsBuffer = new ArrayList<>();
 
@@ -42,6 +38,7 @@ public class ProgramPanel extends BasePanel {
             case INSERTION_SORT -> InsertionSort.insertionSort(stepsBuffer, arr);
             case MERGE_SORT -> MergeSort.mergeSort(stepsBuffer, arr);
             case QUICK_SORT -> QuickSort.quickSort(stepsBuffer, arr);
+            case LSD_RADIX_SORT -> LSD_RadixSort.radixSort(stepsBuffer, arr, ARR_MAX_BINARY_LENGTH);
         }
 
         sortV = new SortVisualizer(stepsBuffer);
