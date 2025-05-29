@@ -17,7 +17,7 @@ public abstract class _Settings {
     public static final int SCREEN_HEIGHT = 900;
 
     // SORTING
-    public static final SortingAlgorithm SETTING_SORTING_ALGORITHM = SortingAlgorithm.LSD_RADIX_SORT;
+    public static final SortingAlgorithm SETTING_SORTING_ALGORITHM = SortingAlgorithm.MERGE_SORT;
     public static final int ARR_LENGTH = 800;
     public static final int ARR_MAX_BINARY_LENGTH = Integer.toBinaryString(ARR_LENGTH - 1).length();
 
