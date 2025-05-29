@@ -2,7 +2,7 @@ package sorting.algorithms;
 
 import java.util.List;
 
-import static sorting.SortingUtils.swap;
+import static utils.ArrayUtils.swap;
 
 public abstract class BubbleSort {
 

@@ -17,10 +17,10 @@ public abstract class _Settings {
     public static final int SCREEN_HEIGHT = 900;
 
     // SORTING
-    public static final SortingAlgorithm SETTING_SORTING_ALGORITHM = SortingAlgorithm.MERGE_SORT;
+    public static final SortingAlgorithm SETTING_SORTING_ALGORITHM = SortingAlgorithm.QUICK_SORT;
     public static final int ARR_LENGTH = 800;
-    public static final int MIN_VALUE  = 0;
-    public static final int MAX_VALUE  = 800;
+    public static final int ARR_MIN_VALUE = 0;
+    public static final int ARR_MAX_VALUE = 800;
 
     // VISUALIZATION
     public static final Color BACKGROUND_COLOR  = new Color(30, 32, 40);

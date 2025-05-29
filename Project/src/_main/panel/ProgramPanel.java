@@ -5,6 +5,7 @@ import sorting.SortVisualizer;
 import sorting.algorithms.InsertionSort;
 import sorting.algorithms.MergeSort;
 import sorting.algorithms.QuickSort;
+import utils.ArrayUtils;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -15,7 +16,6 @@ import static _main.setting._Settings.*;
 
 public class ProgramPanel extends BasePanel {
 
-    public static Random random = new Random();
     public SortVisualizer sortV;
 
     public ProgramPanel() {
@@ -33,9 +33,7 @@ public class ProgramPanel extends BasePanel {
     @Override
     protected void onStart() {
 
-        int[] arr = new int[ARR_LENGTH];
-        for (int i = 0; i < ARR_LENGTH; i++)
-            arr[i] = random.nextInt(MIN_VALUE, MAX_VALUE);
+        int[] arr = ArrayUtils.createShuffledArr(ARR_MIN_VALUE, ARR_MAX_VALUE, ARR_LENGTH * 8);
 
         List<int[]> stepsBuffer = new ArrayList<>();
 
