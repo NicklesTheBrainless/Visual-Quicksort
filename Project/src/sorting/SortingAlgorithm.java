@@ -8,5 +8,6 @@ public enum SortingAlgorithm {
     SHELL_SORT,
     MERGE_SORT,
     QUICK_SORT,
-    LSD_RADIX_SORT;
+    LSD_RADIX_SORT,
+    MSD_RADIX_SORT;
 }
