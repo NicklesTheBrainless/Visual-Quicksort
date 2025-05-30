@@ -12,6 +12,8 @@ public abstract class InsertionSort {
             for (int j = i; j >= 1; j--)
                 if (arr[j] <= arr[j - 1])
                     swap(stepsBuffer, arr, j, j - 1);
+                else
+                    break;
     }
 
 }

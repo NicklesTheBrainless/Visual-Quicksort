@@ -6,6 +6,7 @@ import utils.ArrayUtils;
 
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import static _main.setting._Settings.*;
@@ -36,10 +37,14 @@ public class ProgramPanel extends BasePanel {
         switch (SETTING_SORTING_ALGORITHM) {
             case BUBBLE_SORT -> BubbleSort.bubbleSort(stepsBuffer, arr);
             case INSERTION_SORT -> InsertionSort.insertionSort(stepsBuffer, arr);
+            case SHELL_SORT -> ShellSort.shellSort(stepsBuffer, arr);
             case MERGE_SORT -> MergeSort.mergeSort(stepsBuffer, arr);
             case QUICK_SORT -> QuickSort.quickSort(stepsBuffer, arr);
             case LSD_RADIX_SORT -> LSD_RadixSort.radixSort(stepsBuffer, arr, ARR_MAX_BINARY_LENGTH);
         }
+
+        System.out.println(stepsBuffer.size());
+        System.out.println(Arrays.toString(arr));
 
         sortV = new SortVisualizer(stepsBuffer);
     }

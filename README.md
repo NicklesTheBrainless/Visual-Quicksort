@@ -10,6 +10,7 @@ Currently implemented sorting algorithms:
 Planned sorting algorithms:
 - MSD RadixSort
 - HeapSort
+- ShellSort
 
 The program doesn't show the algorithms in real time, it does calculate the sorting beforehand, save all the steps while sorting and does then replay them in a given frame rate
 
