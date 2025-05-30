@@ -6,7 +6,7 @@ public abstract class MSD_RadixSort {
 
     public static void radixSort(List<int[]> stepsBuffer, int[] arr, int maxBinaryDigits) {
 
-        sortSplit(stepsBuffer, arr, maxBinaryDigits, 0, arr.length);
+        sortSplit(stepsBuffer, arr, maxBinaryDigits - 1, 0, arr.length);
     }
 
     public static void sortSplit(List<int[]> stepsBuffer, int[] arr, int b, int index0, int length) {
@@ -14,19 +14,19 @@ public abstract class MSD_RadixSort {
         if (length <= 1)
             return;
 
-        int binaryMask = 1 << (b - 1);
+        int binaryMask = 1 << b;
 
         int left = index0;
         int right = index0 + length - 1;
 
         while (left <= right) {
 
-            // find 0 on left side
+            // find a 0 on left side
             while (left <= right && (arr[left] & binaryMask) == 0) {
                 left++;
             }
 
-            // find 1 on right side
+            // find an 1 on right side
             while (left <= right && (arr[right] & binaryMask) != 0) {
                 right--;
             }
