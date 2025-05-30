@@ -10,7 +10,7 @@ public abstract class _Settings {
     public static final String TITLE = "Sorting Algorithms - Visualized";
 
     // FPS
-    public static final int SETTING_FPS = 1_000;
+    public static final int SETTING_FPS = 7_000;
 
     // SCREEN
     public static final int SCREEN_WIDTH  = 900;
