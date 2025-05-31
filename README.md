@@ -5,12 +5,13 @@
 - InsertionSort
 - ShellSort
 - MergeSort
+- HeapSort
 - QuickSort
 - LSD RadixSort
 - MSD RadixSort
 
 ## Planned sorting algorithms:
-- HeapSort
+- none, I have enough, I probably won't add any algorithms here anymore
 
 ## General Information
 
