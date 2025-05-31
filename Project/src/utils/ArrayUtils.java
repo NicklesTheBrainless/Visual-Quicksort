@@ -24,16 +24,16 @@ public abstract class ArrayUtils {
 
 
 
-    public static void swap(int[] arr, int index1, int index2) {
-        int temp = arr[index1];
-        arr[index1] = arr[index2];
-        arr[index2] = temp;
+    public static void swap(int[] arr, int index0, int index1) {
+        int temp = arr[index0];
+        arr[index0] = arr[index1];
+        arr[index1] = temp;
     }
 
-    public static void swap(List<int[]> stepsBuffer, int[] arr, int index1, int index2) {
-        int temp = arr[index1];
-        arr[index1] = arr[index2];
-        arr[index2] = temp;
+    public static void swap(List<int[]> stepsBuffer, int[] arr, int index0, int index1) {
+        int temp = arr[index0];
+        arr[index0] = arr[index1];
+        arr[index1] = temp;
         stepsBuffer.add(arr.clone());
     }
 

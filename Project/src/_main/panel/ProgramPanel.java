@@ -38,6 +38,7 @@ public class ProgramPanel extends BasePanel {
             case INSERTION_SORT -> InsertionSort.insertionSort(stepsBuffer, arr);
             case SHELL_SORT -> ShellSort.shellSort(stepsBuffer, arr);
             case MERGE_SORT -> MergeSort.mergeSort(stepsBuffer, arr);
+            case HEAP_SORT -> HeapSort.heapSort(stepsBuffer, arr);
             case QUICK_SORT -> QuickSort.quickSort(stepsBuffer, arr);
             case LSD_RADIX_SORT -> LSD_RadixSort.radixSort(stepsBuffer, arr, ARR_MAX_BINARY_LENGTH);
             case MSD_RADIX_SORT -> MSD_RadixSort.radixSort(stepsBuffer, arr, ARR_MAX_BINARY_LENGTH);

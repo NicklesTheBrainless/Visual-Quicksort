@@ -7,6 +7,7 @@ public enum SortingAlgorithm {
     INSERTION_SORT,
     SHELL_SORT,
     MERGE_SORT,
+    HEAP_SORT,
     QUICK_SORT,
     LSD_RADIX_SORT,
     MSD_RADIX_SORT;

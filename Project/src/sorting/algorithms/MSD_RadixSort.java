@@ -2,6 +2,8 @@ package sorting.algorithms;
 
 import java.util.List;
 
+import static utils.ArrayUtils.swap;
+
 public abstract class MSD_RadixSort {
 
     public static void radixSort(List<int[]> stepsBuffer, int[] arr, int maxBinaryDigits) {
@@ -22,22 +24,16 @@ public abstract class MSD_RadixSort {
         while (left <= right) {
 
             // find a 0 on left side
-            while (left <= right && (arr[left] & binaryMask) == 0) {
+            while (left <= right && (arr[left] & binaryMask) == 0)
                 left++;
-            }
 
             // find an 1 on right side
-            while (left <= right && (arr[right] & binaryMask) != 0) {
+            while (left <= right && (arr[right] & binaryMask) != 0)
                 right--;
-            }
 
             // swap the 0 and the 1
-            if (left < right) {
-                int temp = arr[left];
-                arr[left] = arr[right];
-                arr[right] = temp;
-                stepsBuffer.add(arr.clone());
-            }
+            if (left < right)
+                swap(stepsBuffer, arr, left, right);
         }
 
         int index1 = left;
